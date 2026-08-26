@@ -1,0 +1,107 @@
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~
+$ cd C:/Users/HongMengmeng/Desktop/Assignment_for_System_Development_Tools
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools (master)
+$ mkdir q03
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools (master)
+$ cd q03
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (master)
+$ git init -b main
+Initialized empty Git repository in C:/Users/HongMengmeng/Desktop/Assignment_for_System_Development_Tools/q03/.git/
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main)
+$ echo "mode=normal" > config.txt
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main)
+$ git add config.txt
+warning: in the working copy of 'config.txt', LF will be replaced by CRLF the next time Git touches it
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main)
+$ git commit -m "Initial commit with mode=normal"
+[main (root-commit) 1d8c934] Initial commit with mode=normal
+ 1 file changed, 1 insertion(+)
+ create mode 100644 config.txt
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main)
+$ git checkout -b feature-a
+Switched to a new branch 'feature-a'
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (feature-a)
+$ echo "mode=safe" > config.txt
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (feature-a)
+$ git add config.txt
+warning: in the working copy of 'config.txt', LF will be replaced by CRLF the next time Git touches it
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (feature-a)
+$ git commit -m "Change mode to safe in feature-a"
+[feature-a 71f7c45] Change mode to safe in feature-a
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (feature-a)
+$ git checkout main
+Switched to branch 'main'
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main)
+$ git checkout -b feature-b
+Switched to a new branch 'feature-b'
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (feature-b)
+$ echo "mode=fast" > config.txt
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (feature-b)
+$ git add config.txt
+warning: in the working copy of 'config.txt', LF will be replaced by CRLF the next time Git touches it
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (feature-b)
+$ git commit -m "Change mode to fast in feature-b"
+[feature-b 3f9b85f] Change mode to fast in feature-b
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (feature-b)
+$ git checkout main
+Switched to branch 'main'
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main)
+$ git merge feature-a
+Updating 1d8c934..71f7c45
+Fast-forward
+ config.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main)
+$ git merge feature-b
+Auto-merging config.txt
+CONFLICT (content): Merge conflict in config.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main|MERGING)
+$ echo "mode=safe" > config.txt
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main|MERGING)
+$ echo "note=reviewed" >> config.txt
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main|MERGING)
+$ git add config.txt
+warning: in the working copy of 'config.txt', LF will be replaced by CRLF the next time Git touches it
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main|MERGING)
+$ git commit -m "Merge feature-b: resolve conflict, keep safe mode and add note"
+[main a616d51] Merge feature-b: resolve conflict, keep safe mode and add note
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+HongMengmeng@LAPTOP-UFIKN99U MINGW64 ~/Desktop/Assignment_for_System_Development_Tools/q03 (main)
+$ git log --all --graph --decorate --oneline
+*   a616d51 (HEAD -> main) Merge feature-b: resolve conflict, keep safe mode and add note
+|\
+| * 3f9b85f (feature-b) Change mode to fast in feature-b
+* | 71f7c45 (feature-a) Change mode to safe in feature-a
+|/
+* 1d8c934 Initial commit with mode=normal
