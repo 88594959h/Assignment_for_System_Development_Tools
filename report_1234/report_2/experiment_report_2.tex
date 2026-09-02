@@ -1,0 +1,433 @@
+\documentclass[12pt,a4paper]{article}
+
+% ==================== 宏包加载 ====================
+\usepackage[UTF8]{ctex}           % 中文支持
+\usepackage[margin=2.5cm]{geometry} % 页边距
+\usepackage{graphicx}             % 图片支持
+\usepackage{float}                % 图片位置控制 [H]
+\usepackage{hyperref}             % 超链接
+\usepackage{listings}             % 代码高亮
+\usepackage{xcolor}               % 颜色定义
+\usepackage{fancyhdr}             % 页眉页脚
+\usepackage{titlesec}             % 标题格式
+\usepackage{enumitem}             % 列表间距控制
+\usepackage{booktabs}             % 三线表
+\usepackage{array}                % 表格增强
+\usepackage{caption}              % 图表标题增强
+\usepackage{tcolorbox}            % 彩色文本框
+\usepackage{fontawesome5}         % 图标 (若编译报错可注释掉并替换图标)
+\usepackage{tabularx}             % 自适应表格
+\usepackage{setspace}             % 行距
+\usepackage{tikz}                 % 绘图 (用于装饰)
+
+% ==================== 浅蓝色主题颜色定义 ====================
+\definecolor{themeBlue}{RGB}{70, 130, 180}       % 钢蓝色 (主色调)
+\definecolor{lightBlueBg}{RGB}{230, 240, 255}    % 极浅蓝 (背景)
+\definecolor{codeBlue}{RGB}{240, 248, 255}       % 爱丽丝蓝 (代码背景)
+\definecolor{darkText}{RGB}{30, 30, 30}          % 深灰黑 (正文)
+\definecolor{accentBlue}{RGB}{100, 149, 237}     % 矢车菊蓝 (强调)
+
+% ==================== 全局字体设置 (自动适配系统) ====================
+% 注意：不再手动指定 SimSun，让 ctex 根据操作系统自动选择，避免 "Font not found" 错误
+% 如果需要英文衬线体，可保留下面这行，否则注释掉
+% \setmainfont{Times New Roman} 
+
+% ==================== 代码样式配置 (浅蓝风格) ====================
+\lstdefinestyle{mystyle}{
+    language=bash,
+    backgroundcolor=\color{codeBlue},   % 浅蓝背景
+    basicstyle=\ttfamily\small\color{darkText},
+    commentstyle=\color{gray}\itshape,
+    keywordstyle=\color{themeBlue}\bfseries, % 关键字用主题蓝
+    stringstyle=\color{accentBlue},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=none,
+    numbersep=8pt,
+    numberstyle=\tiny\color{themeBlue}, % 行号用主题蓝
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    frame=single,                       % 单线边框
+    rulecolor=\color{themeBlue},        % 边框颜色
+    framerule=1pt,
+    xleftmargin=1em,
+    framexleftmargin=0.5em,
+    framextopmargin=4pt,
+    framexbottommargin=4pt,
+    aboveskip=1em,
+    belowskip=1em,
+    literate={~} {$\sim$}{1}            % 处理波浪号显示
+}
+\lstset{style=mystyle}
+
+% ==================== 页眉页脚 ====================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{themeBlue} \textbf{系统开发工具基础 · 实验报告}}
+\fancyhead[R]{\small\color{gray} 洪朦朦 \quad 24170001032}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\color{themeBlue}\hrule} % 页眉线也是蓝色
+
+% ==================== 自定义文本框 (tcolorbox) ====================
+% 思路框 (浅蓝底)
+\newtcolorbox{infobox}[1][]{
+    colback=lightBlueBg,
+    colframe=themeBlue,
+    fonttitle=\bfseries\color{white},
+    coltitle=white,
+    title={#1},
+    rounded corners,
+    boxrule=0.5pt,
+    left=5pt, right=5pt, top=5pt, bottom=5pt
+}
+
+% 重点框 (稍深蓝边框)
+\newtcolorbox{keybox}[1][]{
+    colback=white,
+    colframe=accentBlue,
+    fonttitle=\bfseries\color{themeBlue},
+    title={#1},
+    rounded corners,
+    boxrule=1pt,
+    left=5pt, right=5pt, top=5pt, bottom=5pt
+}
+
+% ==================== 图片占位符命令 ====================
+\newcommand{\imgplaceholder}[2][0.8\textwidth]{%
+    \begin{figure}[H]
+        \centering
+        \fboxrule=1pt \fboxsep=10pt
+        \fcolorbox{themeBlue}{lightBlueBg}{%
+            \parbox{#1}{\centering\vspace{2cm}
+                {\color{themeBlue}\Large\faImage}\\[0.2cm]
+                {\small\color{gray} #2}\\[0.2cm]
+                \vspace{2cm}
+            }%
+        }
+        \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+        \caption{#2}
+        \label{fig:#2}
+    \end{figure}
+}
+
+% ==================== 文档元数据 ====================
+\newcommand{\myname}{洪朦朦}
+\newcommand{\myid}{24170001032}
+\newcommand{\myteacher}{周小伟}
+\newcommand{\myrepo}{https://github.com/88594959h/Assignment\_for\_System\_Development\_Tools}
+\newcommand{\reportdate}{\today}
+
+% ==================== 标题格式定制 ====================
+\titleformat{\section}
+  {\Large\bfseries\color{themeBlue}}
+  {\thesection}
+  {1em}
+  {}
+  [\titlerule] % 标题下加蓝线
+
+\titleformat{\subsection}
+  {\large\bfseries\color{accentBlue}}
+  {\thesubsection}
+  {1em}
+  {}
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\color{darkText}}
+  {\thesubsubsection}
+  {1em}
+  {}
+
+\begin{document}
+
+% ==================== 封面 ====================
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    % 顶部装饰线
+    {\color{themeBlue}\rule{\textwidth}{2pt}}
+    \vspace{1cm}
+    
+    {\fontsize{28}{36}\selectfont\bfseries\color{themeBlue} 系统开发工具基础}
+    \vspace{0.5cm}
+    
+    {\fontsize{20}{28}\selectfont\bfseries\color{darkText} 第 2 周实验报告}
+    
+    \vspace{2cm}
+    
+    % 信息表格
+\begin{tabularx}{\textwidth}{@{}lX@{}}
+    {\large\textbf{课程名称：}} & {\large 系统开发工具基础} \\[12pt]
+    {\large\textbf{授课教师：}} & {\large \myteacher} \\[12pt]
+    {\large\textbf{学生姓名：}} & {\large \myname} \\[12pt]
+    {\large\textbf{学\qquad 号：}} & {\large \myid} \\[12pt]
+    {\large\textbf{报告日期：}} & {\large \reportdate} \\[12pt]
+    {\large\textbf{GitHub：}} & {\large \href{\myrepo}{\nolinkurl{\myrepo}}} \\[12pt]
+\end{tabularx}
+    
+    \vfill
+    
+    % 底部装饰
+    {\color{themeBlue}\rule{\textwidth}{2pt}}
+    \vspace{1cm}
+    {\small\color{gray} 计算机科学与技术学院 \quad 2026年}
+    
+\end{titlepage}
+
+% ==================== 实验概述 ====================
+\section{实验概述}
+
+\subsection{实验环境}
+\begin{itemize}[leftmargin=2em, itemsep=5pt]
+    \item \textbf{操作系统}：Windows 11 + Git Bash (MINGW64)
+    \item \textbf{Shell}：Bash (Git for Windows)
+    \item \textbf{版本控制}：Git 2.x
+    \item \textbf{\LaTeX{} 发行版}：TeX Live 2024+
+    \item \textbf{编辑器}：VS Code
+\end{itemize}
+
+\subsection{GitHub 仓库信息}
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{仓库地址}：\href{\myrepo}{\myrepo}
+\end{itemize}
+
+
+
+% ==================== 课上实验部分 ====================
+\newpage
+\section{课上实验 (第 2 周)}
+
+% ---------- 实验一 ----------
+\subsection{实验一：控制一个可清理的后台任务}
+
+\subsubsection{题目要求}
+\begin{enumerate}[leftmargin=2em]
+    \item 将给定脚本保存为 \texttt{q05/worker.sh}，赋予执行权限，在前台启动并将 stdout、stderr 分别写入 \texttt{stdout.log}、\texttt{stderr.log}。
+    \item 使用 Ctrl-Z 挂起任务，再用 \texttt{bg} 让其在后台继续运行；使用 \texttt{jobs} 确认状态。
+    \item 使用 \texttt{jobs -p} 或等价方式动态取得 PID（不得手工抄写），发送 SIGTERM 并等待任务结束。
+    \item 确认 \texttt{cleanup.log} 中出现 \texttt{CLEAN\_EXIT}，且任务已正常退出；禁止使用 \texttt{kill -9}。
+\end{enumerate}
+
+\subsubsection{核心指令与实现}
+\begin{lstlisting}[caption={实验一关键 Shell 指令}]
+#1.生成脚本
+$ cat > worker.sh << 'EOF'
+> #!/usr/bin/env bash
+trap 'echo CLEAN_EXIT >> cleanup.log; exit 0' TERM INT
+n=0
+while true; do
+    echo "$n"
+    n=$((n+1))
+    sleep 1
+done
+EOF
+
+#2.赋予权限
+$ chmod +x worker.sh
+
+#3.前台启动并重定向日志
+$ ./worker.sh >stdout.log 2>stderr.log
+
+#4.在终端按 Ctrl-Z 挂起后，后台继续，确认状态
+$ bg %1  
+$ jobs 
+
+#5.动态获取 PID 并发送 SIGTERM
+$ PID=$(jobs -p)
+$ kill -TERM "$PID"
+$ wait "$PID" 
+
+#6.验证清理结果
+$ grep "CLEAN_EXIT" cleanup.log
+$ jobs 
+$ ps -p "$PID"  
+\end{lstlisting}
+
+\subsubsection{实验分析}
+\begin{infobox}[实现思路]
+准备阶段创建脚本并赋权，以前台模式启动且分离重定向 stdout 与 stderr；通过 Ctrl-Z 挂起进程后使用 \texttt{bg} 转入后台，并用 \texttt{jobs} 验证状态；利用 \texttt{jobs -p} 动态获取 PID 发送 SIGTERM 触发 \texttt{trap} 清理机制，最后用 \texttt{wait} 等待退出并验证 \texttt{cleanup.log} 中的标记。
+\end{infobox}
+
+\paragraph{实验重点}
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{I/O 重定向语法}：掌握 \texttt{>stdout.log 2>stderr.log} 分别重定向 stdout (fd=1) 和 stderr (fd=2) 的写法。
+    \item \textbf{作业控制三件套}：理解 Ctrl-Z（挂起）、\texttt{bg}（后台继续）、\texttt{jobs}（查看状态）的协作流程。
+    \item \textbf{动态 PID 获取}：必须使用 \texttt{jobs -p} 或 \texttt{\$!} 等 shell 内置机制获取 PID，严禁手动复制粘贴数字。
+    \item \textbf{Trap 信号处理}：理解 \texttt{trap '...' TERM INT} 的作用——捕获 SIGTERM/SIGINT 后执行清理逻辑再退出，这是实现“可清理”的核心。
+    \item \textbf{优雅退出 vs 强制杀死}：区分 SIGTERM（允许进程自行清理）与 SIGKILL/\texttt{kill -9}（立即终止、无法被 trap 捕获）的本质区别。
+\end{itemize}
+
+\subsubsection{运行结果}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验一生成脚本.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验一：生成脚本}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验一重定向日志.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验一：重定向日志}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验一挂起并确认状态.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验一：挂起并确认状态}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{验证清理结果.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验一：验证清理结果}
+\end{figure}
+
+%----------实验二-----------
+\subsection{实验二：语义重构与本地开发反馈}
+
+\subsubsection{题目要求}
+\begin{enumerate}[leftmargin=2em]
+    \item 在已配置好 Python、pytest 和 ruff 的课程环境中打开 \texttt{q06} 目录，并启用 Python 语言服务器；按照给定内容分别创建 \texttt{math\_utils.py}、\texttt{app.py} 和 \texttt{test\_math\_utils.py} 三个文件。
+    \item 使用编辑器语言服务器功能，分别演示对符号 \texttt{total\_price} 的“跳转到定义”与“查找引用”操作。
+    \item 使用“重命名符号”功能将 \texttt{total\_price} 重构为 \texttt{calculate\_total}，确保函数定义及所有跨文件引用同步更新，且无遗漏或错误。
+    \item 在 \texttt{app.py} 中临时添加未使用的导入语句 \texttt{import os}，使用 \texttt{ruff} 检测该问题并自动/手动删除；最终运行 \texttt{ruff check} 与 \texttt{pytest}，确保两者均无报错并通过验证。
+\end{enumerate}
+
+\subsubsection{核心指令与实现}
+\begin{lstlisting}[caption={实验二关键 Shell 指令}]
+
+#1.创建三个Python文件
+    $ cat << 'EOF' > math_utils.py
+def total_price(price: float, count: int) -> float:
+    return price * count
+EOF
+
+$ cat << 'EOF' > app.py
+from math_utils import total_price
+print(total_price(12.5, 4))
+EOF
+
+$ cat << 'EOF' > test_math_utils.py
+from math_utils import total_price
+def test_total_price():
+    assert total_price(12.5, 4) == 50.0
+EOF
+
+#2.打开代码编辑器
+code .
+
+#3. 在 app.py 顶部临时加入未使用的 import os
+$ sed -i '1i import os' app.py
+
+#4.使用 ruff 发现代码问题
+$ python -m ruff check app.py
+
+#5.使用 ruff 自动修复并删除未使用的 import
+$ python -m ruff check --fix app.py
+
+#6.验证 app.py 中的 import os 已被自动删除
+$ cat app.py
+
+#7.对整个目录运行 ruff 检查，确保无任何警告或错误
+$ python -m ruff check .
+
+#8.运行 pytest，确保测试全部通过
+$ python -m pytest
+\end{lstlisting}
+
+\subsubsection{实验分析}
+\begin{infobox}[实现思路]
+在已配置好 Python、pytest 与 ruff 的课程环境中打开 q06 目录，创建 \texttt{math\_utils.py}、\texttt{app.py} 和 \texttt{test\_math\_utils.py} 三个文件并写入给定代码；启用编辑器的 Python 语言服务器（如 Pylance），分别演示"跳转到定义"（Go to Definition）定位到 \texttt{total\_price} 的函数体，以及"查找引用"（Find References）列出该符号在三个文件中的所有引用位置；随后使用"重命名符号"（Rename Symbol）将 \texttt{total\_price} 统一改为 \texttt{calculate\_total}，验证定义与所有引用同步更新；最后在 \texttt{app.py} 中临时添加未使用的 \texttt{import os}，运行 ruff 检测并删除该冗余导入，再次运行 ruff 与 pytest 确保全部通过。
+\end{infobox}
+
+\paragraph{实验重点}
+\begin{itemize}[leftmargin=2em]
+    \item \textbf{语言服务器（LSP）}：理解 Language Server Protocol 的作用——为编辑器提供语义级别的代码分析能力（跳转定义、查找引用、重命名等），远超纯文本搜索。
+    \item \textbf{跳转到定义与查找引用}：掌握 Go to Definition（快速定位符号声明处）和 Find References（列出符号在所有文件中的使用位置）的操作，体会语言服务器对跨文件符号关系的精确追踪。
+    \item \textbf{语义重命名 vs 文本替换}：区分"Rename Symbol"与全局查找替换的本质差异——前者基于语法树和符号作用域，仅修改同一符号的引用，不会误伤同名但不同作用域的标识符。
+    \item \textbf{静态检查工具 ruff}：理解 ruff 作为 linter 的作用——在代码运行前即可发现未使用的导入（unused import）、语法问题等，帮助保持代码整洁与规范。
+    \item \textbf{测试驱动的开发反馈}：体会 pytest 在重构后的回归验证价值——重命名符号后立即运行测试，确保功能行为未被破坏，形成"重构—检查—测试"的良性开发循环。
+\end{itemize}
+
+\subsubsection{运行结果}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验二创建三个Python文件.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验二:创建三个Python文件}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验二按住Ctrl并点击totalprice.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验二:按住Ctrl并点击total\_price}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验二跳转到定义.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验二:跳转到定义}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验二查找引用.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验二:查找引用}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验二列出调用.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验二:列出调用}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验二右键F2重命名.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验二:右键F2重命名}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验二安装ruff和pytest插件.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验二:安装ruff和pytest插件}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验二ruff检查并修复.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验二:ruff检查并修复}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验二验证并对整个目录进行ruff检查.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验二:验证并对整个目录进行ruff检查}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{实验二运行pytest确保测试通过.png}
+    \captionsetup{labelfont={color=themeBlue,bf}, textfont={color=darkText}}
+    \caption{实验二:运行pytest确保测试通过}
+\end{figure}
+
+\end{document}
