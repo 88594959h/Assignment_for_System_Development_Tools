@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.8.24)  2 SEP 2026 16:48
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.8.24)  6 SEP 2026 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1291,6 +1291,8 @@ Overfull \hbox (25.47028pt too wide) in paragraph at lines 196--197
 github.com/88594959h/Assignment_for_System_Development_Tools[] 
  []
 
+File: commit_log.png Graphic file (type bmp)
+<commit_log.png>
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.99998pt, for example:
@@ -1300,14 +1302,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 217.
+nput line 223.
 
 
 LaTeX Font Warning: Font shape `TU/FangSong(0)/m/it' undefined
-(Font)              using `TU/FangSong(0)/m/n' instead on input line 218.
+(Font)              using `TU/FangSong(0)/m/n' instead on input line 224.
 
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 219.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 225.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.99998pt, for example:
@@ -1423,7 +1425,220 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
 
-[11] (./experiment_report_2.aux)
+[11]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[13]
+File: 实验三缺陷代码错误排序结果.png Graphic file (type bmp)
+<实验三缺陷代码错误排序结果.png>
+File: 实验三pdb调试过程.png Graphic file (type bmp)
+<实验三pdb调试过程.png>
+File: 实验三修复并运行.png Graphic file (type bmp)
+<实验三修复并运行.png>
+File: 实验三运行测试.png Graphic file (type bmp)
+<实验三运行测试.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[14]
+Overfull \hbox (19.57266pt too wide) in paragraph at lines 544--545
+[]\TU/SimSun(0)/m/n/12 在 \TU/lmtt/m/n/12 q08 \TU/SimSun(0)/m/n/12 目 录 中 创 建 \TU
+/lmtt/m/n/12 generate_words.py \TU/SimSun(0)/m/n/12 和 \TU/lmtt/m/n/12 wordfreq.
+py\TU/SimSun(0)/m/n/12 ，|  运 行 生 成 脚 本 产 生 \TU/lmtt/m/n/12 words.txt\TU/SimSun(
+0)/m/n/12 ；|
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[15]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[16]
+File: 实验四生成词表与原程序计时.png Graphic file (type bmp)
+<实验四生成词表与原程序计时.png>
+File: 实验四cProfile性能分析.png Graphic file (type bmp)
+<实验四cProfile性能分析.png>
+File: 实验四优化后程序计时.png Graphic file (type bmp)
+<实验四优化后程序计时.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[17]
+File: 实验四计算结果.png Graphic file (type bmp)
+<实验四计算结果.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[18]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 643.
+File: 思考题1.png Graphic file (type bmp)
+<思考题1.png>
+
+Overfull \hbox (15.87555pt too wide) in paragraph at lines 670--671
+[]\TU/lmtt/m/n/12 --color=auto\TU/SimSun(0)/m/n/12 ：|  为 不 同 类 型 的 文 件 着 色  |（多
+ 数 发 行 版 的 \TU/lmtt/m/n/12 alias ls='ls --color=auto'
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[19]
+File: 思考题2.png Graphic file (type bmp)
+<思考题2.png>
+File: 思考题3.1.png Graphic file (type bmp)
+<思考题3.1.png>
+File: 思考题3.2.png Graphic file (type bmp)
+<思考题3.2.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[20]
+File: 思考题3.3.png Graphic file (type bmp)
+<思考题3.3.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[21]
+File: 思考题4.png Graphic file (type bmp)
+<思考题4.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[22]
+File: 思考题5.png Graphic file (type bmp)
+<思考题5.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[23]
+File: 思考题7.png Graphic file (type bmp)
+<思考题7.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[24]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[25]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[26]
+File: 思考题9.png Graphic file (type bmp)
+<思考题9.png>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[27]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[28]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[29]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 913.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99998pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99998pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.99998pt}.
+
+[30] (./experiment_report_2.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
@@ -1433,15 +1648,15 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `experiment_report_2.out' has not changed.
-(rerunfilecheck)             Checksum: 0310EF1924D2546FC1248F50FE84107F;1634.
+(rerunfilecheck)             Checksum: 9A0864FEDAF8014293D361DBC2E583CA;5813.
  ) 
 Here is how much of TeX's memory you used:
- 32360 strings out of 468168
- 687327 string characters out of 5436524
- 1450177 words of memory out of 5000000
- 60570 multiletter control sequences out of 15000+600000
- 633748 words of font info for 102 fonts, out of 8000000 for 9000
+ 32724 strings out of 468168
+ 697871 string characters out of 5436524
+ 1574177 words of memory out of 5000000
+ 60913 multiletter control sequences out of 15000+600000
+ 633772 words of font info for 105 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,13n,111p,542b,1997s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on experiment_report_2.xdv (12 pages, 140544 bytes).
+Output written on experiment_report_2.xdv (31 pages, 541536 bytes).

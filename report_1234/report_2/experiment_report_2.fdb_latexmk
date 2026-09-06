@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1788338901.37951 "experiment_report_2.xdv" "experiment_report_2.pdf" "experiment_report_2" 1788338903.13398 0
-  "experiment_report_2.xdv" 1788338900 140544 a99bc2ce454dc0027cc98e6f9065e626 "xelatex"
+["xdvipdfmx"] 1788690931.54753 "experiment_report_2.xdv" "experiment_report_2.pdf" "experiment_report_2" 1788690935.955 0
+  "experiment_report_2.xdv" 1788690931 541536 2bcc8599a06c2b20b5cbabc1b9b1baee "xelatex"
   (generated)
   "experiment_report_2.pdf"
   (rewritten before read)
-["xelatex"] 1788338897.76409 "experiment_report_2.tex" "experiment_report_2.xdv" "experiment_report_2" 1788338903.10789 0
+["xelatex"] 1788690928.21794 "experiment_report_2.tex" "experiment_report_2.xdv" "experiment_report_2" 1788690935.91987 0
   "c:/Windows/Fonts/msyh.ttc" 1744006208 19704352 1e10e74402e59d54499af795caf0b135 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1787556486 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1787558871 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
@@ -172,9 +172,10 @@
   "c:/texlive/2026/texmf-dist/web2c/texmf.cnf" 1787555495 43630 e9fa012910491fe5ae08a72c3c2997a7 ""
   "c:/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt" 1787559124 5948914 4cf5d96be04c55530e48a5f678e776d6 ""
   "c:/texlive/2026/texmf.cnf" 1787558898 713 e69b156964470283e0530f5060668171 ""
-  "experiment_report_2.aux" 1788338900 4609 9ebb4a25c37a51f33d3366b1f817ec10 "xelatex"
-  "experiment_report_2.out" 1788338900 1634 0310ef1924d2546fc1248f50fe84107f "xelatex"
-  "experiment_report_2.tex" 1788338829 17631 a653a88bbade0833868783f272489efd ""
+  "commit_log.png" 1788690813 65473 992f820129b741b5d547cb6458ef6380 ""
+  "experiment_report_2.aux" 1788690931 11553 ad10812c1272e87539d8f3e697cd9bde "xelatex"
+  "experiment_report_2.out" 1788690931 5813 9a0864fedaf8014293d361dbc2e583ca "xelatex"
+  "experiment_report_2.tex" 1788690920 47270 d1a85d30f03949d0b7c6d001a96e9102 ""
   "实验二ruff检查并修复.png" 1788338451 60185 dea368bdf03d3b7c413bda019c8afa32 ""
   "实验二安装ruff和pytest插件.png" 1788338164 89927 61ddd25a1bad879fa0e058da04fdf883 ""
   "实验二按住Ctrl并点击totalprice.png" 1788329666 33722 c1d71c078666d373effe77039b6e8071 ""
@@ -185,9 +186,26 @@
   "实验二验证并对整个目录进行ruff检查.png" 1788338674 40498 6e12534f28ae6ae81e995215576ea873 ""
   "实验二右键F2重命名.png" 1788330386 20215 8b834b5ad752d9b01c209e5b660679a3 ""
   "实验二运行pytest确保测试通过.png" 1788338766 23847 cf49bb1b4b35041e75e4f6ef9c9b7021 ""
+  "实验三pdb调试过程.png" 1788505148 48954 3b1f7d197e3006bc284c04873dd7a7bf ""
+  "实验三缺陷代码错误排序结果.png" 1788504788 16767 9f8ee31fb161bb2308b56ad3bcf054d0 ""
+  "实验三修复并运行.png" 1788505510 21294 f334c6e653d01950c41c572d00f83e45 ""
+  "实验三运行测试.png" 1788505603 62579 2dd3485f0932daa1a3d7bd55bbe730b0 ""
+  "实验四cProfile性能分析.png" 1788507912 55144 13d087c24e7b27602498cbfb1b04d141 ""
+  "实验四计算结果.png" 1788508378 57571 fc77241296c62f2a63464e87500de1a0 ""
+  "实验四生成词表与原程序计时.png" 1788507850 39594 07c907cc6d9e8d4ca13e44318f2d4207 ""
+  "实验四优化后程序计时.png" 1788507975 29602 7a0d521cab6c1fdb8cf08711bfe3239e ""
   "实验一挂起并确认状态.png" 1788319994 22933 bdc8ccde720cd436550a2033de5b48bd ""
   "实验一生成脚本.png" 1788318920 20338 6726f154e6fbab92f79a5c4632ac5d90 ""
   "实验一重定向日志.png" 1788319905 13163 38e564220ff8a01b42a99710f02ef562 ""
+  "思考题1.png" 1788668042 33798 16630735f282491d545ad5ce3a5dd90e ""
+  "思考题2.png" 1788668186 21696 d237445ec705925bc780aa026086f6d8 ""
+  "思考题3.1.png" 1788668358 309167 1d1290cb4239d01ee374391d3a872281 ""
+  "思考题3.2.png" 1788668412 299033 b6ec315db189cfb428c606f0ee06a7cc ""
+  "思考题3.3.png" 1788668430 192059 e2cfafdd3ba0421274fbf7ab094af9b5 ""
+  "思考题4.png" 1788668778 26528 346f75e3970bb591f1fc732114776113 ""
+  "思考题5.png" 1788688150 51838 d59e7c80c144874c4e8050fe108d31d0 ""
+  "思考题7.png" 1788669347 36229 f17dc8ea680dcf5425b40cb655c98f25 ""
+  "思考题9.png" 1788689956 142242 e501667d2ffb0e1d170f141dd75fd543 ""
   "验证清理结果.png" 1788320108 32477 c740ecd0dee457ad0387c821cd5f27f1 ""
   (generated)
   "experiment_report_2.aux"
